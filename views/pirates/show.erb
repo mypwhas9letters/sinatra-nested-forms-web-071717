@@ -1,7 +1,15 @@
 <h1>Display your Pirate here</h1>
-
+<p><%=@p["pirate"]['name']%></p>
+<p><%=@p["pirate"]['weight']%></p>
+<p><%=@p["pirate"]['height']%></p>
 
 <h2>Display your first ship here</h2>
+  <%@p["pirate"]["ships"][0].each do |x,y| %>
+ <p><%= y %></p>
+ <% end %>
 
 
 <h2>Display your second ship here</h2>
+<%@p["pirate"]["ships"][1].each do |x,y| %>
+<p><%= y %></p>
+<% end %>
